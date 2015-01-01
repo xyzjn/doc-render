@@ -1,0 +1,243 @@
+<html>
+<head>
+<title></title>
+<style type="text/css">
+body {
+	margin-left: 45px;
+	margin-right: 45px;
+	font-family: Arial Unicode MS;
+	font-size: 10px;
+}
+
+table {
+	margin: auto;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #444444;
+}
+
+th,td {
+	border: 1px solid #444444;
+	font-size: 10px;
+	margin-left: 5px;
+}
+
+.mcContent {
+	line-height: 180%;
+	padding: 20px;
+}
+
+.logo {
+	text-align: center;
+}
+
+.title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.notes {
+	font-weight: normal;
+	margin-left: 5px;
+	margin-right: 5px;
+	line-height: 18px;
+}
+
+.text_content {
+	margin-left: 5px;
+	margin-right: 5px;
+	line-height: 18px;
+}
+
+.sum_insured_first_row {
+	width: 20%;
+}
+
+.sum_insured_span {
+	font-size: 10px;
+}
+
+.special_agreements_div {
+	page-break-before: always;
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.special_agreements_div .special_agreements {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.title_right {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.title_right p {
+	text-align: left;
+	margin: 0;
+	margin-left: 50%;
+	padding: 0;
+}
+
+@page {
+	size: 8.5in 11in;
+	@
+	bottom-center
+	{
+	content
+	:
+	"page "
+	counter(
+	page
+	)
+	" of  "
+	counter(
+	pages
+	);
+}
+
+.signature {
+	margin: 0 auto;
+	clear: both;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.signature_table {
+/* 	font-size: 16px; */
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+	<div>
+		<div class="title">
+			境外紧急救援意外伤害及境外紧急救援医疗保险单 <br /> China Life Overseas Emergency
+			Assistance Accidental Death &amp; <br /> Dismemberment and Medical
+			Insurance Policy
+		</div>
+		<div class="title_right">
+			<p>保单号：${policyNo}</p>
+			<p>Policy No.</p>
+		</div>
+		<div class="notes">
+			开源健康保险股份有限公司按照本保险合同所附条款以及投保单和有关资料的内容，承保下述被保险人的人身保险，特订立本保险单。为
+			便于理解，保险单以中英文写成，如保险单中中英文表达有歧义或冲突，请以中文为准。<br /> China Life Insurance
+			Company Limited underwrites personal insurance for the following
+			insured and issues this policy in accor dance with the Application
+			Form and the terms and conditions of this insurance contract and
+			other relevant materials. The policy is written both in English and
+			Chinese to facilitate your understanding. If any dispute arises out
+			of the interpretation of the policy, the Chinese version shall
+			govern. <br />投保险种:境外紧急救援意外伤害保险China Life Overseas Emergency
+			Assistance Accidental Death &amp; Dismemberment Insurance<br /> Name
+			of Policy：附加境外紧急救援医疗保险China Life Overseas Emergency Assistance
+			Medical Insurance
+		</div>
+
+		<div class="insurance_info">
+			<table class="insurance_info_table" cellpadding="0" cellspacing="0"
+				width="100%">
+				<tr>
+					<td width="20%" colspan="3">投保人<br /> Policyholder
+					</td>
+					<td width="43%" colspan="3">${holderName}<br /></td>
+					<td width="15%">与被保险人关系<br /> Relationship with the Insured
+					</td>
+					<td >${relation}</td>
+				</tr>
+				<tr>
+					<td width="20%" colspan="3">联络地址<br /> Correspondence Address
+					</td>
+					<td width="43%" colspan="3">${holderAdress}</td>
+					<td width="15%">邮编<br /> Postal Code
+					</td>
+					<td >${holderPostCode}</td>
+				</tr>
+				<tr class="td_width1">
+					<td width="20%" colspan="3">被保险人姓名<br /> Name of the Insured
+					</td>
+					<td width="13%">${holderName}</td>
+					<td width="10%">（拼音）<br /> （Pinyin）
+					</td>
+					<td width="18%">${insuredPingyinName}</td>
+					<td width="15%">护照号码<br /> Passport No
+					</td>
+					<td>${insuredPassportNo}</td>
+				</tr>
+				<tr>
+					<td width="5%">性别<br /> Sex
+					</td>
+					<td width="5%">${insuredSex}</td>
+					<td width="10%">出生日期<br /> Date of Birth
+					</td>
+					<td width="13%">${insuredBirthday}</td>
+					<td width="10%">电话<br /> Telephone No.
+					</td>
+					<td width="18%">${insuredPhone}</td>
+					<td width="15%">证件号码 <br />ID No.</td>
+					<td >${insuredIDNo}</td>
+				</tr>
+				<tr>
+					<td colspan="3">请详细列明前往国家或地区<br /> Destination
+					</td>
+					<td colspan="3">${destination}</td>
+					<td>受益人姓名<br /> Beneficiary
+					</td>
+					<td>${beneficiaryName}</td>
+				</tr>
+				<tr>
+					<td class="address_class" colspan="3">备注 <br /> Remarks
+					</td>
+					<td colspan="5">${remarks}</td>
+				</tr>
+				<tr>
+					<td class="address_class" colspan="3">保险期间 <br /> Insurance
+						period
+					</td>
+					<td colspan="5">${period}</td>
+				</tr>
+			</table>
+		</div>
+
+	</div>		
+	<div class="sum_insured_div">
+			<span class="sum_insured_span text_content">保险金额 表 是的 Table of Sum
+			 Insured:</span>
+			<table> 
+				<tr>
+					<td width="60%">保险责任<br /> Insurance Liability
+					</td>
+					<td width="20%">保险金额<br /> Sum Insured
+					</td>
+					<td>保险费<br /> Premium（RMB）
+					</td>
+				</tr>
+
+				<tr style="line-height: 24px;">
+					<td>境外意外伤害或残疾 Overseas Accidental Death &amp; Disability</td>
+					<td>${accidentalSumInsured}</td>
+					<td rowspan="3">${premium}</td>
+				</tr>
+				<tr style="line-height: 24px;">
+					<td>境外突发急性病身故或残疾 Overseas Acute disease Death &amp;
+						Disability</td>
+					<td>${emergencySumInsured}</td>
+				</tr>
+				<tr style="line-height: 18px;">
+					<td>紧急救援医疗保险金 Emergency Medical Assistance Benefits<br />
+						紧急转移医疗保险金 Emergency Transfer Benefits<br /> 住院医疗保险金
+						Hospitalization Benefits<br /> 转运回国保险金 Repatriation Benefits<br />
+						紧急门诊医疗保险金 Emergency Out - patient Treatment Benefits<br />
+						紧急牙科门诊医疗保险金 Emergency Dental Out-patient Treatment Benefits<br />
+						后事处理保险金 Remains Disposition Benefits
+					</td>
+					<td>${medicalSumInsured}</td>
+				</tr>
+			</table>
+		</div>
+</body>
+</html>
